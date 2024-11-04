@@ -1,0 +1,40 @@
+# General information
+name: "@simatic-ax/lacyccom"
+version: 0.0.0-placeholder
+author: Siemens AG
+# Description will be displayed in the apax extension
+description: Library to manage acyclic communication to PN devices using DPV1 services
+type: lib
+#URL to the repository
+repository:
+  type: git
+  url: https://github.com/simatic-ax/lacyccom
+# Registry information, where the package will be published
+registries:
+  '@simatic-ax': 'https://npm.pkg.github.com/'
+# Environment variables
+variables:
+  APAX_BUILD_ARGS:
+    - '--debug'
+targets:
+  - '1500'
+  - 'llvm'
+# Install Setting
+installStrategy: strict
+apaxVersion: 3.2.1
+# Dependencies
+devDependencies:
+  '@ax/sdk': ^2405.1.0
+  "@simatic-ax/snippetscollection": ^1.0.0
+dependencies:
+  "@ax/system-timer": ^7.1.47
+  "@ax/simatic-1500-distributedio": ^7.0.1
+  "@ax/system-serde": ^7.1.47
+  "@ax/simatic-1500-clocks": ^7.0.4
+# Files, which will be shipped with the library
+files:
+  - 'README.md'
+  - 'LICENSE.md'
+  - 'doc'
+  - 'src'
+  - 'snippets'
